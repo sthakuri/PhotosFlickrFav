@@ -1,0 +1,14 @@
+﻿@model Photos.ePaila.com.Models.ViewModel
+@{
+    ViewBag.Title = "Photos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@foreach (var item in Model.Photos)
+{
+    <article class="thumb">
+        <a href="@item.Path" class="image">
+            <img src="@item.Path" alt="" /></a>
+        <h2><a href="@item.URL" target="_blank">@item.Title</a> </h2>
+        <p>Posted by <a href="@item.Author.URL" target="_blank"><strong>@item.Author.Name</strong></a>, on @item.PublishedDate.ToString()</p>
+    </article>
+}

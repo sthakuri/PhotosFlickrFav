@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\suvash.Shah\Desktop\DevBuild</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/02/2016 11:01:05</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>02/02/2016 11:01:11</publishTime>
+    </File>
+    <File Include="bin/Photos.ePaila.com.dll">
+      <publishTime>02/02/2016 13:29:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>02/02/2016 11:01:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>02/02/2016 11:01:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>02/02/2016 11:01:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>02/02/2016 11:01:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>02/02/2016 11:01:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>02/02/2016 11:01:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>02/02/2016 11:01:11</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.min.css">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/css/ie8.css">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/css/ie9.css">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/css/images/arrow.svg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/css/images/close.svg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/css/images/spinner.svg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/css/main.css">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.eot">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.svg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.ttf">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff2">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/fonts/FontAwesome.otf">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/01.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/02.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/03.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/04.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/05.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/06.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/07.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/08.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/09.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/10.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/11.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/fulls/12.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/01.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/02.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/03.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/04.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/05.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/06.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/07.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/08.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/09.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/10.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/11.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/images/thumbs/12.jpg">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/base/_page.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/base/_typography.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/components/_button.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/components/_form.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/components/_icon.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/components/_list.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/components/_panel.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/components/_poptrox-popup.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/components/_table.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/ie8.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/ie9.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/layout/_footer.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/layout/_header.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/layout/_main.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/layout/_wrapper.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/libs/_functions.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/libs/_mixins.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/libs/_skel.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/libs/_vars.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Content/sass/main.scss">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/02/2016 11:00:49</publishTime>
+    </File>
+    <File Include="LICENSE.txt">
+      <publishTime>02/02/2016 11:09:55</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/02/2016 11:01:15</publishTime>
+    </File>
+    <File Include="README.txt">
+      <publishTime>02/02/2016 11:09:55</publishTime>
+    </File>
+    <File Include="Scripts/ie/html5shiv.js">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Scripts/ie/respond.min.js">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery.min.js">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery.poptrox.min.js">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Scripts/main.js">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Scripts/skel.min.js">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Scripts/util.js">
+      <publishTime>02/02/2016 11:10:51</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>02/02/2016 13:23:31</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>02/02/2016 11:00:49</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>02/02/2016 13:18:54</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>02/02/2016 11:00:49</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>02/02/2016 11:00:49</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/02/2016 13:29:18</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
