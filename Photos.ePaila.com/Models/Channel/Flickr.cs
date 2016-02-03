@@ -47,8 +47,12 @@ namespace Photos.ePaila.com.Models.Channel
                     string url = lnk1.Attributes["href"].Value;
 
                     var lnk2 = rssNode.ChildNodes[9];
-                    string path = lnk2.Attributes["href"].Value;
+                    var rel = lnk2.Attributes["rel"].Value;
+                    string path = "";
+                    if (string.Compare(rel, "enclosure", true) != 0)
+                        lnk2 = rssNode.ChildNodes[10];
 
+                    path = lnk2.Attributes["href"].Value;
                     DateTime pubDate = DateTime.Parse(rssNode["published"].InnerText);
 
                     var temp = rssNode["author"];
