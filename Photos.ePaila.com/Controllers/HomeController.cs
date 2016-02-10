@@ -23,6 +23,12 @@ namespace Photos.ePaila.com.Controllers
             return View(model);
         }
 
+        public JsonResult GetNext(int page)
+        {
+            Flickr channel=new Flickr();
+            return Json(channel.Read(page), JsonRequestBehavior.AllowGet);
+        }
+
         public async Task SendEmail(string name, string email, string message)
         {
             //var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";

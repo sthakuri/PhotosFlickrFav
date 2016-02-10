@@ -3,6 +3,32 @@
     ViewBag.Title = "Photos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+    var page = 2;
+    var hasMore = true;
+    $(window).on("scroll", function () {
+        var $document = $(document);
+        var $window = $(this);
+        if ($document.scrollTop() >= $document.height() - $window.height() - 100) {
+            if (hasMore) {
+                hasMore = false;
+                $.ajax({
+                    url: "@Url.Action("GetNext", "Home")",
+                    data: { page: page }
+                }).done(function (data) {
+                    if (data) {
+                        hasMore = true;
+                        page += 1;
+                        $(data).each(function (index, value) {
+                            $("#main").append("<article class=\"thumb\"><a class=\"image\" style=\"cursor: pointer; outline: 0px; background-image: url(&quot;" + value.Path + "&quot;);\"><img src=" + value.Path + " alt=\"\" style=\"display: none;\" /></a><h2><a href=" + value.URL + " target=\"_blank\">" + value.Title + "</a> </h2><p>Posted by <a href=" + value.Author.URL + " target=\"_blank\"><strong>" + value.Author.Name + "</strong></a>, on " + value.PublishedDate.toString() + "</p></article>");
+                        });
+                    }
+                });
+            }
+        }
+    });
+</script>
+
 @foreach (var item in Model.Photos)
 {
     <article class="thumb">
@@ -12,3 +38,17 @@
         <p>Posted by <a href="@item.Author.URL" target="_blank"><strong>@item.Author.Name</strong></a>, on @item.PublishedDate.ToString()</p>
     </article>
 }
+
+@*<article class="thumb">
+    <a class="image" style="cursor: pointer; outline: 0px; background-image: url(&quot;https://farm9.staticflickr.com/8877/18256561180_bdf43d5818_b.jpg&quot;);">
+        <img src="https://farm9.staticflickr.com/8877/18256561180_bdf43d5818_b.jpg" alt="" style="display: none;"></a>
+    <h2><a href="https://www.flickr.com/photos/aadnan613/18256561180/" target="_blank">Prayers.</a> </h2>
+    <p>Posted by <a href="https://www.flickr.com/photos/aadnan613/" target="_blank"><strong>A. adnan</strong></a>, on 4/12/2015 1:30:03 PM</p>
+</article>
+
+<article class="thumb">
+    <a class="image" style="cursor: pointer; outline: 0px; background-image: url('https://farm8.staticflickr.com/7614/16588655000_afd71b2293_b.jpg');">
+        <img src="https://farm8.staticflickr.com/7614/16588655000_afd71b2293_b.jpg" alt="" style="display: none;"></a>
+    <h2><a href="https://www.flickr.com/photos/hikr/16588655000/" target="_blank">Ferry Building marks 1915 World's Fair</a> </h2>
+    <p>Posted by <a href="https://www.flickr.com/photos/hikr/" target="_blank"><strong>roger.williams</strong></a>, on /Date(1425577385000)/</p>
+</article>*@
