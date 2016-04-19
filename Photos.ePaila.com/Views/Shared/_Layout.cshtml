@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+    <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -15,7 +17,7 @@
             $('form').submit(function () {
                 $.ajax({
                     type: 'POST',
-                    url: "@Url.Action("SendEmail","Home")",
+                    url: "@Url.Action("SendEmail", "Home")",
                     data: {
                         name: $("#name").val(),
                         email: $("#email").val(),
@@ -26,6 +28,7 @@
             });
         })
     </script>
+
 </head>
 
 <body>
@@ -35,10 +38,11 @@
 
         <!-- Header -->
         <header id="header">
-            <h1><a href="#"><strong>ePaila</strong> by S Thakuri</a></h1>
+            <h1><a href="www.epaila.com" target="_blank"><strong>epaila.com</strong></a></h1>
             <nav>
                 <ul>
-                    <li><a href="#footer" class="icon fa-info-circle">About</a></li>
+                    <li><a href="#album">Album</a></li>
+                    <li><a href="#footer" class="icon fa-info-circle">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -49,6 +53,31 @@
         </div>
 
         <!-- Footer -->
+        <footer id="album" class="panel">
+            <div class="inner split">
+                @*<div>
+                    <section>
+                       <p>Album 01</p>
+                    </section>
+                    <section>
+                        <p>Album 02</p>
+                    </section>
+                </div>
+                <div>
+                    <section>
+                        <p>Album 03</p>
+                    </section>
+                </div>*@
+                <div>
+                    @for (int i = 0; i < 20; i++)
+                    {
+                     <section>
+                        <p>Album @i.ToString()</p>
+                    </section>
+                    }
+                </div>
+            </div>
+        </footer>
         <footer id="footer" class="panel">
             <div class="inner split">
                 <div>
@@ -62,7 +91,7 @@
                             <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
                             <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
                             <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                            <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+                            <li><a href="https://github.com/ePaila" class="icon fa-github"><span class="label">GitHub</span></a></li>
                             <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
                             <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
                         </ul>
@@ -74,7 +103,7 @@
                 <div>
                     <section>
                         <h2>Get in touch</h2>
-                        <form id="pingme" method="post" action="" >
+                        <form id="pingme" method="post" action="">
                             <div class="field half first">
                                 <input type="text" name="name" id="name" placeholder="Name" />
                             </div>

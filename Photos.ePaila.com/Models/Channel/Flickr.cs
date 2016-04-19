@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Xml;
 using FlickrNet;
 
 namespace Photos.ePaila.com.Models.Channel
@@ -14,16 +11,10 @@ namespace Photos.ePaila.com.Models.Channel
 
     public class Flickr : IChannel
     {
-        private string _userid;
-        private string _apiToken;
-        private string _secretKey;
-        private int _perPage;
-
-        public string Name { get; set; }
-
-        public string URL { get; set; }
-
-        public string FeedURL { get; set; }
+        private readonly string _apiToken;
+        private readonly int _perPage;
+        private readonly string _secretKey;
+        private readonly string _userid;
 
         public Flickr()
         {
@@ -31,45 +22,39 @@ namespace Photos.ePaila.com.Models.Channel
             _apiToken = "6937bab0b406a6acec47209808dba534";
             _secretKey = "cae4ee1bc43b1d9b";
             _userid = "138274132@N07";
-            _perPage = 30;
+            _perPage = 90;
         }
 
-        public List<Photo> Read()
+        public string Name { get; set; }
+
+        public string URL { get; set; }
+
+        public string FeedURL { get; set; }
+
+        public List<Photo> Read(int page = 1)
         {
-            int page = 1;
-            List<Photo> photos = new List<Photo>();
-            FlickrNet.Flickr flickr = new FlickrNet.Flickr(_apiToken, _secretKey);
-            PhotoCollection col = flickr.FavoritesGetPublicList(_userid, DateTime.Now.AddYears(-10), DateTime.Now, PhotoSearchExtras.All, page, _perPage);
+            var photos = new List<Photo>();
+            var flickr = new FlickrNet.Flickr(_apiToken, _secretKey);
+            
+            PhotoCollection col = flickr.FavoritesGetPublicList(_userid, DateTime.Now.AddYears(-10), DateTime.Now,
+                                                                PhotoSearchExtras.All, page, _perPage);
 
-            foreach (var item in col)
+            foreach (FlickrNet.Photo item in col)
             {
-                Author author = new Author()
-                {
-                    Name = item.OwnerName,
-                    ID = item.UserId,
-                    URL = string.Format("https://www.flickr.com/photos/{0}/", item.PathAlias)
-                };
-                photos.Add(new Photo() { Title = item.Title, URL = item.WebUrl, Path = item.LargeUrl, PublishedDate = item.DateTaken, Author = author });
-            }
-            return photos;
-        }
-
-        public List<Photo> Read(int page)
-        {
-            List<Photo> photos = new List<Photo>();
-
-            FlickrNet.Flickr flickr = new FlickrNet.Flickr("6937bab0b406a6acec47209808dba534", "cae4ee1bc43b1d9b");
-            PhotoCollection col = flickr.FavoritesGetPublicList("138274132@N07", DateTime.Now.AddYears(-10), DateTime.Now, PhotoSearchExtras.All, page, _perPage);
-
-            foreach (var item in col)
-            {
-                Author author = new Author()
-                {
-                    Name = item.OwnerName,
-                    ID = item.UserId,
-                    URL = string.Format("https://www.flickr.com/photos/{0}/", item.PathAlias)
-                };
-                photos.Add(new Photo() { Title = item.Title, URL = item.WebUrl, Path = item.LargeUrl, PublishedDate = item.DateTaken, Author = author });
+                var author = new Author
+                    {
+                        Name = item.OwnerName,
+                        ID = item.UserId,
+                        URL = string.Format("https://www.flickr.com/photos/{0}/", item.UserId)
+                    };
+                photos.Add(new Photo
+                    {
+                        Title = item.Title,
+                        URL = item.WebUrl,
+                        Path = item.DoesLargeExist ? item.LargeUrl : item.MediumUrl,
+                        PublishedDate = item.DateTaken,
+                        Author = author
+                    });
             }
             return photos;
         }

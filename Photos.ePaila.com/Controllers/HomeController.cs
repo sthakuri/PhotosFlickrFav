@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Threading.Tasks;
 using System.Web.Mvc;
 using Photos.ePaila.com.Models;
 using Photos.ePaila.com.Models.Channel;
-using System.Net.Mail;
-using System.Net;
-using System.Threading.Tasks;
 
 namespace Photos.ePaila.com.Controllers
 {
@@ -18,15 +12,13 @@ namespace Photos.ePaila.com.Controllers
 
         public ActionResult Index()
         {
-            ViewModel model = new ViewModel();
-            model.AddChannel(new Flickr());
+            var model = new ViewModel();
             return View(model);
         }
 
         public JsonResult GetNext(int page)
         {
-            Flickr channel=new Flickr();
-            return Json(channel.Read(page), JsonRequestBehavior.AllowGet);
+            return Json(new Flickr().Read(page), JsonRequestBehavior.AllowGet);
         }
 
         public async Task SendEmail(string name, string email, string message)
